@@ -1,0 +1,16 @@
+{
+    "name": "ramir/php-pages",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Ramir\\PhpPages\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "zyx-0314-FJorn",
+            "email": "ramirezian037@gmail.com"
+        }
+    ],
+    "require": {}
+}
