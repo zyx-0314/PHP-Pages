@@ -122,6 +122,10 @@ AD-ProjectName
 |       └─ name.js
 └─ components
 |   └─ name.component.php
+|   └─ templates
+|      └─ name.component.php
+└─ handlers
+|   └─ name.handler.php
 └─ pages
 |  └─ pageName
 |     └─ assets
@@ -133,9 +137,15 @@ AD-ProjectName
 |     |     └─ name.js
 |     └─ index.php
 └─ utils
-|   └─ Name.utils.php
+|   └─ name.utils.php
+└─ vendor
+└─ .gitignore
+└─ bootstrap.php
+└─ composer.json
+└─ composer.lock
 └─ index.php
 └─ readme.md
+└─ router.php
 ```
 > The following should be renamed: name.css, name.js, name.jpeg/.jpg/.webp/.png, name.component.php(but not the part of the `component.php`), Name.utils.php(but not the part of the `utils.php`)
 
