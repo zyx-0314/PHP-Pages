@@ -1,3 +1,10 @@
-</body>
+<?php
+function footer()
+{
+    ?>
+    </body>
 
-</html>
+    </html>
+    <?php
+}
+?>
