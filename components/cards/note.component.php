@@ -1,4 +1,8 @@
 <?php
+require_once BASE_PATH . '/utils/joinWithComma.utils.php';
+?>
+
+<?php
 function displayCardForm($productList)
 {
     foreach ($productList as $product):
