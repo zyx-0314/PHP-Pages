@@ -1,5 +1,6 @@
 <?php
 require_once BASE_PATH . '/utils/joinWithComma.utils.php';
+require_once BASE_PATH . '/utils/convertValueToCurrency.utils.php';
 ?>
 
 <div class="relative overflow-x-auto">
@@ -34,7 +35,7 @@ require_once BASE_PATH . '/utils/joinWithComma.utils.php';
                         <?php echo $product["details"]["category"] ?>
                     </td>
                     <td class="px-6 py-4">
-                        <?php echo $product["details"]["price"] ?>
+                        <?php echo convertValueToCurrency($product["details"]["price"]) ?>
                     </td>
                 </tr>
             <?php endforeach; ?>
