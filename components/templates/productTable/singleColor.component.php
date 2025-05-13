@@ -1,5 +1,5 @@
 <?php
-include BASE_PATH . '/utils/joinWithComma.utils.php';
+require_once BASE_PATH . '/utils/joinWithComma.utils.php';
 ?>
 
 <div class="relative overflow-x-auto">
