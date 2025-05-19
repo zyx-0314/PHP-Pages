@@ -1,15 +1,10 @@
 {
-    "name": "ramir/php-pages",
+    "name": "achilles/ad-task-2",
     "type": "project",
-    "autoload": {
-        "psr-4": {
-            "Ramir\\PhpPages\\": "src/"
-        }
-    },
     "authors": [
         {
-            "name": "zyx-0314-FJorn",
-            "email": "ramirezian037@gmail.com"
+            "name": "chillyboy07",
+            "email": "bonneviechilly@gmail.com"
         }
     ],
     "require": {}
