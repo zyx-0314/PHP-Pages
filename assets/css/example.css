@@ -1,0 +1,160 @@
+/*font*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+body {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 12px 30px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    color: #f5f5f5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-family: 'Merriweather', serif;
+    transition: background 0.3s ease;
+}
+
+.navbar:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.nav-logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    transition: text-shadow 0.3s ease;
+}
+
+.nav-logo a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.nav-logo a:hover {
+    text-shadow: 0 0 8px #f5f5f5;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #f5f5f5;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .nav-logo {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*landing*/
+.landing-hero {
+    position: relative;
+    background-image: url('/assets/img/1.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Reduced height */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 80px;
+    color: white;
+}
+
+.landing-hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.356);
+    z-index: 1;
+}
+
+.landing-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+    max-width: 800px;
+}
+
+.landing-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    margin-top: 60px;
+}
+
+.landing-content p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 25px;
+}
+
+.landing-btn {
+    padding: 12px 28px;
+    background-color: #e67e22;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.landing-btn:hover {
+    background-color: #cf5e0e;
+}
