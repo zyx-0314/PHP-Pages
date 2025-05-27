@@ -3,8 +3,10 @@ require_once BASE_PATH . '/utils/joinWithComma.utils.php';
 ?>
 
 <?php
-function displayCardForm($productList)
+function displayCardListRandom($productList)
 {
+    shuffle($productList);
+
     foreach ($productList as $product):
         ?>
         <a href="#"
@@ -18,6 +20,9 @@ function displayCardForm($productList)
                 <?php echo
                     joinWithComma($product["details"]["color"]);
                 ?>
+            </p>
+            <p class="text-gray-300">
+                $ <?php echo number_format($product["details"]["price"], 2, ".", " ,") ?>
             </p>
         </a>
         <?php
