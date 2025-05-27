@@ -13,8 +13,12 @@ RUN docker-php-ext-enable mongodb
 
 COPY --from=composer:2.6 /usr/bin/composer /usr/local/bin/composer
 
+COPY . /var/www/html/
+
 USER zyx
 
-EXPOSE 9000
+EXPOSE 8000
 
-CMD ["compose", "start"]
+RUN composer install
+
+CMD ["php", "-S", "0.0.0.0:8000", "router.php"]
