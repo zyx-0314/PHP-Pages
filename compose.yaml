@@ -12,6 +12,12 @@ services:
           action: sync
         - path: ./composer.json
           action: rebuild
+        - path: ./public
+          action: rebuild
+        - path: ./assets
+          action: rebuild
+        - path: ./pages
+          action: rebuild
         - path: ./composer.lock
           action: rebuild
     depends_on:
