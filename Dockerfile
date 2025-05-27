@@ -7,7 +7,7 @@ RUN addgroup -S developer && adduser -S zyx -G developer
 WORKDIR /var/www/html
 
 RUN apk add --no-cache git unzip autoconf make g++ icu-dev libzip-dev zlib-dev postgresql-dev libpq
-RUN docker-php-ext-install pdo_pgsql intl zip
+RUN docker-php-ext-install pgsql pdo_pgsql intl zip
 RUN pecl install mongodb 
 RUN docker-php-ext-enable mongodb
 
