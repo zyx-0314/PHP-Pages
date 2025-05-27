@@ -11,7 +11,7 @@ function renderMainLayout(callable $content)
     require_once BASE_PATH . '/components/templates/nav.component.php';
 
     // Datas
-    require_once BASE_PATH . "/staticData/navPages.php";
+    require_once BASE_PATH . "/staticData/navPages.staticData.php";
 
     // Code Body
     head("Product List");
