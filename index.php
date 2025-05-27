@@ -1,23 +1,17 @@
 <?php
-require BASE_PATH . '/vendor/autoload.php';
-require BASE_PATH . '/utils/htmlEscape.utils.php';
+// call the layout you want to use from layout folder
+include BASE_PATH . "/layout/main.layout.php";
 
-require_once BASE_PATH . '/handlers/pageData.handler.php';
-require_once BASE_PATH . '/components/cards/note.component.php';
-require_once BASE_PATH . '/components/templates/foot.component.php';
-require_once BASE_PATH . '/components/templates/head.component.php';
-require_once BASE_PATH . '/components/templates/nav.component.php';
-?>
+// functions that will render the layout of your choosing
+renderMainLayout(
+    function () {
+        ?>
+    adasd
+    <section>
+        <h1>Magic</h1>
+    </section>
 
-<?php
-head('Product List');
-navHeader($navList);
-?>
-
-<section class="grid grid-cols-3">
-    <?php displayCardForm($productList); ?>
-</section>
-
-<?php
-footer();
-?>
+    <?php
+    }
+)
+    ?>
