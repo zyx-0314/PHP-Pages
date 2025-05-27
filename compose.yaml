@@ -20,6 +20,10 @@ services:
   mongodb:
     image: mongo:latest
     container_name: web-app-php-mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: rootPassword
+      MONGO_INITDB_DATABASE: mydatabase
     ports:
       - "27111:27017"
     volumes:
