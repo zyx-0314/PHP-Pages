@@ -1,5 +1,5 @@
 <?php
-function renderMainLayout(callable $content)
+function renderMainLayout(callable $content, $title)
 {
     // Libraries
     require BASE_PATH . '/vendor/autoload.php';
@@ -14,7 +14,7 @@ function renderMainLayout(callable $content)
     require_once BASE_PATH . "/staticData/navPages.staticData.php";
 
     // Code Body
-    head("Product List");
+    head($title);
     navHeader($headNavList);
 
     // This is the content
