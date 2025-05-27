@@ -126,6 +126,8 @@ AD-ProjectName
 |      └─ name.component.php
 └─ handlers
 |   └─ name.handler.php
+└─ layout
+|   └─ name.layout.php
 └─ pages
 |  └─ pageName
 |     └─ assets
@@ -136,6 +138,8 @@ AD-ProjectName
 |     |  └─ js
 |     |     └─ name.js
 |     └─ index.php
+└─ staticData
+|  └─ name.staticdata.php
 └─ utils
 |   └─ name.utils.php
 └─ vendor
