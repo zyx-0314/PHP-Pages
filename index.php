@@ -1,6 +1,12 @@
 <?php
+include BASE_PATH . "/handlers/postgreChecker.handler.php";
+
 // call the layout you want to use from layout folder
 include BASE_PATH . "/layout/main.layout.php";
+
+// Database Checker
+
+
 
 // functions that will render the layout of your choosing
 renderMainLayout(
