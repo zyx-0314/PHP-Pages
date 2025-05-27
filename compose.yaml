@@ -1,11 +1,10 @@
 services:
   web-app-php:
-    build: .
-    container_name: web-app-php-1
-    # depends_on:
-    #   - postgres
-    #   - mongo
-    # networks: [ backend ]
+    build:
+      context: .
+    container_name: web-app-php-service
+    ports:
+      - "8000:8000"
     develop:
       watch:
         - path: .
@@ -15,3 +14,32 @@ services:
           action: rebuild
         - path: ./composer.lock
           action: rebuild
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    container_name: web-app-php-mongodb
+    ports:
+      - "27111:27017"
+    volumes:
+      - web-app-php-mongodb:/data/db/mongodb
+
+  postgresql:
+    image: postgres:15
+    container_name: web-app-php-postgresql
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5112:5432"
+    volumes:
+      - web-app-php-postgresql:/data/db/postgresql
+
+volumes:
+  web-app-php-mongodb:
+    driver: local
+  web-app-php-postgresql:
+    driver: local
